@@ -37,7 +37,7 @@ public class TwoSum {
         }
     }
 
-    // Método principal para probar la solución
+    // Método principal para probar la soluciónn
     public static void main(String[] args) {
         Solution solution = new Solution();
 

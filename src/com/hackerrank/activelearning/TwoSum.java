@@ -1,24 +1,17 @@
 package com.hackerrank.activelearning;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
- * <h3>Nivel 1: Problema Clásico de Arrays</h3>
- *
- * <p><b>Nombre del Problema: "Two Sum" (Suma de Dos)</b></p>
- *
- * <p>Este es, probablemente, uno de los problemas de entrevista más comunes que existen.</p>
- *
- * <p><b>Enunciado:</b></p>
- *
- * <p>Dado un array de números enteros nums y un número entero target, tu tarea es devolver los índices de los dos números en el array que suman target. Puedes asumir que siempre habrá exactamente una solución.</p>
- *
- * <p><b>Ejemplo:</b></p>
- *
- * <ul>
- *   <li><b>Input:</b> <code>nums = [2, 7, 11, 15]</code>, <code>target = 9</code></li>
- *   <li><b>Output:</b> <code>[0, 1]</code> (Porque <code>nums[0]</code> + <code>nums[1]</code> es <code>2 + 7 = 9</code>)</li>
- * </ul>
+ * Nivel 1: Problema Clásico de Arrays
+ * Nombre del Problema: "Two Sum" (Suma de Dos)
+ * Este es, probablemente, uno de los problemas de entrevista más comunes que existen.
+ * Enunciado:
+ * Dado un array de números enteros nums y un número entero target, tu tarea es devolver los índices de los dos números en el array que suman target. Puedes asumir que siempre habrá exactamente una solución.
+ * Ejemplo:
+ *   - Input: nums = [2, 7, 11, 15], target = 9
+ *   - Output: [0, 1] (Porque nums[0] + nums[1] es 2 + 7 = 9)
  */
 public class TwoSum {
 
@@ -37,35 +30,28 @@ public class TwoSum {
         }
     }
 
-    // Método principal para probar la soluciónn
+    // Method principal para probar la solución
     public static void main(String[] args) {
         Solution solution = new Solution();
+        Scanner scanner = new Scanner(System.in);
 
-        // Caso de prueba 1
-        int[] nums1 = {2, 7, 11, 15};
-        int target1 = 9;
-        int[] result1 = solution.twoSum(nums1, target1);
-        System.out.println("Caso de prueba 1:");
-        System.out.println("Input: nums = " + Arrays.toString(nums1) + ", target = " + target1);
-        System.out.println("Output: " + Arrays.toString(result1)); // Esperado: [0, 1]
-        System.out.println();
+        System.out.println("Ingrese el tamaño del arreglo:");
+        int n = scanner.nextInt();
+        int[] nums = new int[n];
 
-        // Caso de prueba 2
-        int[] nums2 = {3, 2, 4};
-        int target2 = 6;
-        int[] result2 = solution.twoSum(nums2, target2);
-        System.out.println("Caso de prueba 2:");
-        System.out.println("Input: nums = " + Arrays.toString(nums2) + ", target = " + target2);
-        System.out.println("Output: " + Arrays.toString(result2)); // Esperado: [1, 2]
-        System.out.println();
+        System.out.println("Ingrese los elementos del arreglo:");
+        for (int i = 0; i < n; i++) {
+            nums[i] = scanner.nextInt();
+        }
 
-        // Caso de prueba 3
-        int[] nums3 = {3, 3};
-        int target3 = 6;
-        int[] result3 = solution.twoSum(nums3, target3);
-        System.out.println("Caso de prueba 3:");
-        System.out.println("Input: nums = " + Arrays.toString(nums3) + ", target = " + target3);
-        System.out.println("Output: " + Arrays.toString(result3)); // Esperado: [0, 1]
-        System.out.println();
+        System.out.println("Ingrese el valor del objetivo (target):");
+        int target = scanner.nextInt();
+
+        int[] result = solution.twoSum(nums, target);
+
+        System.out.println("Input: nums = " + Arrays.toString(nums) + ", target = " + target);
+        System.out.println("Output: " + Arrays.toString(result));
+
+        scanner.close();
     }
 }

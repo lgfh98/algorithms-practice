@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Nivel 1: Problema Clásico de Arrays
+ * Nivel 1: Problema Clásico de Arrays.
  * Nombre del Problema: "Two Sum" (Suma de Dos)
  * Este es, probablemente, uno de los problemas de entrevista más comunes que existen.
  * Enunciado:
